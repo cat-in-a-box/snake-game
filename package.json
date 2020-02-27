@@ -1,0 +1,46 @@
+{
+  "name": "snake",
+  "homepage": "https://cat-in-a-box.github.io/snake-game",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-helmet": "^5.2.1",
+    "react-scripts": "3.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.1.1"
+  },
+  "guppy": {
+    "id": "34874c30-0b76-11ea-9232-155000059c75",
+    "name": "snake",
+    "type": "create-react-app",
+    "color": "#4919b7",
+    "icon": null,
+    "createdAt": 1574241290356
+  }
+}

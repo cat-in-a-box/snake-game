@@ -1,0 +1,105 @@
+@font-face {
+    font-family: "Josefin Sans";
+    src: url("components/files/font.woff2");
+}
+
+/*CSS в Реакте не хочет грузить бэкграунд из public, ругается на это. Поэтому добавил в src/components, оттуда грузит нормально*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    background-image: url(components/files/Background.jpg);
+    background-repeat: repeat;
+    color: rgb(66, 66, 66);
+}
+
+
+/****Navbar****/
+
+.navbar {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.navbarButton1 {
+    display: inline-block;
+    margin: 1em;
+}
+
+.navbarButton2 {
+    display: inline-block;
+    margin: 1em;
+}
+
+.navbarButton3 {
+    display: inline-block;
+    margin: 1em;
+}
+
+.navbarButton4 {
+    display: inline-block;
+    margin: 1em;
+}
+
+.navbar a {
+    display: inline-block;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.navbar a:hover {
+    font-weight: bold;
+}
+
+
+/****snake****/
+.GameCanvas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2em;
+}
+
+.score {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1.2em;
+    margin-top: 0.2em;
+}
+
+.gameField {
+    margin-top: 0.5em;
+}
+
+.RestartButton {
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.44);
+    border-radius: 2em;
+    padding: 0.4em;
+    display: inline-block;
+    text-decoration: none;
+    transform: translate(-50%, -50%);
+    width: 10em;
+    text-align: center;
+
+}
+
+.RestartButton:hover{
+    background: rgba(249, 210, 157, 0.16);
+}
+
+
+
+
+
+
+
+
