@@ -11,11 +11,11 @@ export default class GameProcess extends React.Component {
         //цвет бекграунда канваса
         const CanvasBackgroundColor = "white";
         //цвет тела змеи
-        const SnakeColor = 'lightgreen';
+        const SnakeColor = 'rgba(145,255,133,0.7)';
         //цвет бордера змеи
         const SnakeBorderColor = 'darkgreen';
         //цвет еды
-        const FoodColor = 'lightpink';
+        const FoodColor = '#ffa08f';
         //цвет бордера еды
         const FoodBorderColor = 'black';
 
