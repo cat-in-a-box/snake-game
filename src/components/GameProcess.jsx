@@ -11,7 +11,7 @@ export default class GameProcess extends React.Component {
         //цвет бекграунда канваса
         const CanvasBackgroundColor = "white";
         //цвет тела змеи
-        const SnakeColor = 'lightblue';
+        const SnakeColor = 'lightgreen';
         //цвет бордера змеи
         const SnakeBorderColor = 'darkgreen';
         //цвет еды
