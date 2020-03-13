@@ -17,19 +17,14 @@
 /****Navbar****/
 
 .Header {
-    position: absolute;
-    left: 50%;
-    top: 5%;
-    transform: translate(-50%, -50%);
+    margin-top: 1em;
+    text-align: center;
+
 }
 
 .Header a {
-    display: inline-block;
-    letter-spacing: 1px;
-    text-align: center;
     text-decoration: none;
     font-size: 1.3em;
-    padding:     2em;
 }
 
 .Header a:hover {
