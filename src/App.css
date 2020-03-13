@@ -16,18 +16,14 @@
 
 /****Navbar****/
 
-.navbar {
+.Header {
     position: absolute;
     left: 50%;
     top: 5%;
     transform: translate(-50%, -50%);
 }
 
-.navbarButton1 {
-    display: inline-block;
-    margin: 1em;
-}
-.navbar a {
+.Header a {
     display: inline-block;
     letter-spacing: 1px;
     text-align: center;
@@ -36,7 +32,7 @@
     padding:     2em;
 }
 
-.navbar a:hover {
+.Header a:hover {
     font-weight: bold;
 }
 
