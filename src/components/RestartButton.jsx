@@ -16,9 +16,7 @@ function RestartButton(event) {
 
     //Собственно самам кнопка
     return (
-        <div>
-            <a className="RestartButton" href="https://cat-in-a-box.github.io/snake-game/">Restart game (SPACE)</a>
-        </div>
+        <a className="RestartButton" href="https://cat-in-a-box.github.io/snake-game/">Restart game (SPACE)</a>
     )
 }
 
