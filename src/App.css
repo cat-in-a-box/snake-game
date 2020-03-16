@@ -11,69 +11,328 @@
     background-image: url(components/files/Background.jpg);
     background-repeat: repeat;
     color: rgb(66, 66, 66);
-}
-
-
-/****Navbar****/
-
-.Header {
-    margin-top: 1em;
     text-align: center;
-
 }
 
-.Header a {
-    text-decoration: none;
-    font-size: 1.3em;
+/** HEADER **/
+/** HEADER **/
+@media screen and (max-width:320px) {
+    .Header {
+        text-align: center;
+        text-decoration-line: none;
+        font-size: 1.3em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+    .Header:hover {
+        font-weight: bold;
+    }
+    .Header a {
+        text-decoration-line: none;
+    }
+}
+@media screen and (min-width:321px) and (max-width:639px) {
+    .Header {
+        text-align: center;
+        text-decoration-line: none;
+        font-size: 1.3em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+    .Header:hover {
+        font-weight: bold;
+    }
+    .Header a {
+        text-decoration-line: none;
+    }
+}
+@media screen and (min-width:640px) and (max-width:959px) {
+    .Header {
+        text-align: center;
+        text-decoration-line: none;
+        font-size: 1.3em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+    .Header:hover {
+        font-weight: bold;
+    }
+    .Header a {
+        text-decoration-line: none;
+    }
+}
+@media screen and (min-width:960px) and (max-width:1279px) {
+    .Header {
+        text-align: center;
+        text-decoration-line: none;
+        font-size: 1.3em;
+        margin-top: 1em;
+    }
+    .Header:hover {
+        font-weight: bold;
+    }
+    .Header a {
+        text-decoration-line: none;
+    }
+}
+@media screen and (min-width:1280px) and (max-width:1599px) {
+    .Header {
+        text-align: center;
+        text-decoration-line: none;
+        font-size: 1.3em;
+        margin-top: 1em;
+    }
+    .Header:hover {
+        font-weight: bold;
+    }
+    .Header a {
+        text-decoration-line: none;
+    }
+}
+@media screen and (min-width:1600px) {
+    .Header {
+        text-align: center;
+        text-decoration-line: none;
+        font-size: 1.3em;
+        margin-top: 1em;
+    }
+    .Header:hover {
+        font-weight: bold;
+    }
+    .Header a {
+        text-decoration-line: none;
+    }
 }
 
-.Header a:hover {
-    font-weight: bold;
+/** GAME CANVAS **/
+/** GAME CANVAS **/
+@media screen and (max-width:320px) {
+    .GameCanvas {
+        margin-top: 2em;
+        text-align: center;
+        font-size: 2em;
+    }
+}
+@media screen and (min-width:321px) and (max-width:639px) {
+    .GameCanvas {
+        margin-top: 2em;
+        text-align: center;
+        font-size: 2em;
+    }
+}
+@media screen and (min-width:640px) and (max-width:959px) {
+    .GameCanvas {
+        margin-top: 2em;
+        text-align: center;
+        font-size: 2em;
+    }
+}
+@media screen and (min-width:960px) and (max-width:1279px) {
+    .GameCanvas {
+        margin-top: 2em;
+        text-align: center;
+        font-size: 2em;
+    }
+}
+@media screen and (min-width:1280px) and (max-width:1599px) {
+    .GameCanvas {
+        margin-top: 2em;
+        text-align: center;
+        font-size: 2em;
+    }
+}
+@media screen and (min-width:1600px) {
+    .GameCanvas {
+        margin-top: 2em;
+        text-align: center;
+        font-size: 2em;
+    }
+}
+
+/** SCORE **/
+/** SCORE **/
+@media screen and (max-width:320px) {
+    .score {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.1em;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+    }
+    .scoreUndertext {
+        text-align: center;
+        font-weight: normal;
+        font-size: 0.6em;
+        padding-bottom: 1em;
+    }
+}
+@media screen and (min-width:321px) and (max-width:639px) {
+    .score {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.1em;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+    }
+    .scoreUndertext {
+        text-align: center;
+        font-weight: normal;
+        font-size: 0.6em;
+        padding-bottom: 1em;
+    }
+}
+@media screen and (min-width:640px) and (max-width:959px) {
+    .score {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.1em;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+    }
+    .scoreUndertext {
+        text-align: center;
+        font-weight: normal;
+        font-size: 0.6em;
+        padding-bottom: 1em;
+    }
+}
+@media screen and (min-width:960px) and (max-width:1279px) {
+    .score {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.1em;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+    }
+    .scoreUndertext {
+        text-align: center;
+        font-weight: normal;
+        font-size: 0.6em;
+        padding-bottom: 1em;
+    }
+}
+@media screen and (min-width:1280px) and (max-width:1599px) {
+    .score {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.1em;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+    }
+    .scoreUndertext {
+        text-align: center;
+        font-weight: normal;
+        font-size: 0.6em;
+        padding-bottom: 1em;
+    }
+}
+@media screen and (min-width:1600px) {
+    .score {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.1em;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+    }
+    .scoreUndertext {
+        text-align: center;
+        font-weight: normal;
+        font-size: 0.6em;
+        padding-bottom: 1em;
+    }
+}
+
+/** RestartButton **/
+/** RestartButton **/
+@media screen and (max-width:320px) {
+    .RestartButton {
+        border: 2px solid rgba(0, 0, 0, 0.44);
+        border-radius: 2em;
+        padding: 0.4em;
+        text-decoration: none;
+        position: absolute;
+        top: 70%;
+        transform: translate(-50%, -50%);
+    }
+    .RestartButton:hover{
+        background: rgba(249, 210, 157, 0.16);
+    }
+}
+@media screen and (min-width:321px) and (max-width:639px) {
+    .RestartButton {
+        border: 2px solid rgba(0, 0, 0, 0.44);
+        border-radius: 2em;
+        padding: 0.4em;
+        text-decoration: none;
+        position: absolute;
+        top: 70%;
+        transform: translate(-50%, -50%);
+    }
+    .RestartButton:hover{
+        background: rgba(249, 210, 157, 0.16);
+    }
+}
+@media screen and (min-width:640px) and (max-width:959px) {
+    .RestartButton {
+        border: 2px solid rgba(0, 0, 0, 0.44);
+        border-radius: 2em;
+        padding: 0.4em;
+        text-decoration: none;
+        position: absolute;
+        top: 70%;
+        transform: translate(-50%, -50%);
+    }
+    .RestartButton:hover{
+        background: rgba(249, 210, 157, 0.16);
+    }
+}
+@media screen and (min-width:960px) and (max-width:1279px) {
+    .RestartButton {
+        border: 2px solid rgba(0, 0, 0, 0.44);
+        border-radius: 2em;
+        padding: 0.4em;
+        text-decoration: none;
+        position: absolute;
+        top: 70%;
+        transform: translate(-50%, -50%);
+    }
+    .RestartButton:hover{
+        background: rgba(249, 210, 157, 0.16);
+    }
+}
+@media screen and (min-width:1280px) and (max-width:1599px) {
+    .RestartButton {
+        border: 2px solid rgba(0, 0, 0, 0.44);
+        border-radius: 2em;
+        padding: 0.4em;
+        text-decoration: none;
+        position: absolute;
+        top: 90%;
+        transform: translate(-50%, -50%);
+    }
+    .RestartButton:hover{
+        background: rgba(249, 210, 157, 0.16);
+    }
+}
+@media screen and (min-width:1600px) {
+    .RestartButton {
+        border: 2px solid rgba(0, 0, 0, 0.44);
+        border-radius: 2em;
+        padding: 0.4em;
+        text-decoration: none;
+        position: absolute;
+        top: 75%;
+        transform: translate(-50%, -50%);
+    }
+    .RestartButton:hover{
+        background: rgba(249, 210, 157, 0.16);
+    }
 }
 
 
-/****snake****/
-.GameCanvas {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 2em;
-}
 
-.score {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.1em;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-}
 
-.scoreUndertext {
-    text-align: center;
-    font-weight: normal;
-    font-size: 0.6em;
-    padding-bottom: 1em;
-}
 
-.RestartButton {
-    position: absolute;
-    top: 95%;
-    left: 50%;
-    border: 2px solid rgba(0, 0, 0, 0.44);
-    border-radius: 2em;
-    padding: 0.4em;
-    display: inline-block;
-    text-decoration: none;
-    transform: translate(-50%, -50%);
-    text-align: center;
-
-}
-
-.RestartButton:hover{
-    background: rgba(249, 210, 157, 0.16);
-}
 
 
 
