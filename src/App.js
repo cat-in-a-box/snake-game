@@ -10,8 +10,8 @@ function App() {
     <div className="App">
       <Header/>
       <GameCanvas/>
-      <GameProcess/>
       <RestartButton/>
+      <GameProcess/>
     </div>
   );
 }
