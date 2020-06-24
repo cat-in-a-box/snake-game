@@ -1,13 +1,11 @@
-@font-face {
-    font-family: "Josefin Sans";
-    src: url("components/files/font.woff2");
-}
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
 
 /*CSS в Реакте не хочет грузить бэкграунд из public, ругается на это. Поэтому добавил в src/components, оттуда грузит нормально*/
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Jost', serif;
     background-image: url(components/files/Background.jpg);
     background-repeat: repeat;
     color: rgb(66, 66, 66);
@@ -20,7 +18,7 @@
     text-align: center;
     text-decoration-line: none;
     font-size: 1.3em;
-    margin-bottom: 1em;
+    margin-top: 1em;
 }
 .Header:hover {
     font-weight: bold;
@@ -66,6 +64,42 @@
 @media screen and (min-width:1600px) {
 }
 
+
+.GameField {
+}
+@media screen and (max-width:320px) {
+}
+@media screen and (min-width:321px) and (max-width:639px) {
+    .GameField {
+        width: 420px;
+        height: 360px;
+    }
+}
+@media screen and (min-width:640px) and (max-width:959px) {
+    .GameField {
+        width: 510px;
+        height: 360px;
+    }
+}
+@media screen and (min-width:960px) and (max-width:1279px) {
+    .GameField {
+        width: 720px;
+        height: 360px;
+    }
+}
+@media screen and (min-width:1280px) and (max-width:1599px) {
+    .GameField {
+        width: 720px;
+        height: 360px;
+    }
+}
+@media screen and (min-width:1600px) {
+    .GameField {
+        width: 810px;
+        height: 510px;
+    }
+}
+
 /** SCORE **/
 /** SCORE **/
 .score {
@@ -97,13 +131,12 @@
 /** RestartButton **/
 /** RestartButton **/
 .RestartButton {
+    display: inline-block;
     border: 2px solid rgba(0, 0, 0, 0.44);
     border-radius: 2em;
     padding: 0.4em;
     text-decoration: none;
-    position: absolute;
-    top: 70%;
-    transform: translate(-50%, -50%);
+    margin-top: 2em;
 }
 .RestartButton:hover{
     background: rgba(249, 210, 157, 0.16);
