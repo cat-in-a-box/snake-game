@@ -3,13 +3,12 @@ import React from 'react';
 export default class GameProcess extends React.Component {
 
     componentDidMount() {
-
         //скорость обновления игры
         const GameRefreshSpeed = 120;
         //цвет бордера канваса
         const CanvasBorderColor = 'black';
         //цвет бекграунда канваса
-        const CanvasBackgroundColor = "white";
+        let CanvasBackgroundColor = "white";
         //цвет тела змеи
         const SnakeColor = 'rgba(145,255,133,0.7)';
         //цвет бордера змеи
@@ -41,7 +40,7 @@ export default class GameProcess extends React.Component {
         // Вертикальная скорость движения
         let dy = 0;
 
-        const gameCanvas = document.getElementById("gameCanvas");
+        const gameCanvas = document.getElementById("SnakeGameCanvas");
         const ctx = gameCanvas.getContext("2d");
 
         // Старт игры
@@ -56,10 +55,22 @@ export default class GameProcess extends React.Component {
          * Постоянно выполняется, чтобы игра игралась
          **/
 
+        let victoryText = document.getElementById("SnakeScoreUnderText");
+
         function main() {
-            if (GameEnd()) return;
+            if (GameEnd()) {
+                victoryText.innerHTML = "Не отчаивайтесь, попробуйте еще раз! :)";
+                return;
+            }
+            if (localStorage.getItem('darkModeStatus') === 'true') {
+                CanvasBackgroundColor = "rgba(72, 72, 84, 1)";
+            }
+            else {
+                CanvasBackgroundColor = "white";
+            }
             // Заканчивает игру, если соблюдены все условия
             setTimeout(function onTick() {
+                victoryText.innerHTML = "Двигай змейку с помощью стрелок на клавиатуре";
                 changingDirection = false;
                 prepareCanvas();
                 drawFood();
@@ -106,7 +117,7 @@ export default class GameProcess extends React.Component {
                 // Повышает счёт
                 score += 1;
                 // Отображает счет на экране
-                document.getElementById('score').innerHTML = score;
+                document.getElementById('SnakeScore').innerHTML = score;
                 // Создает новую еду
                 spawnFood();
             } else {
@@ -201,7 +212,7 @@ export default class GameProcess extends React.Component {
                 dx = 30;
                 dy = 0;
             }
-            if (pressedKey === downArrowKey&& !movingUp) {
+            if (pressedKey === downArrowKey && !movingUp) {
                 dx = 0;
                 dy = 30;
             }
