@@ -1,4 +1,5 @@
 # snake-game
+Demo:https://cat-in-a-box.github.io/snake
 Simple snake game built with React for my portfolio page
 
 1. Move your snake with arrow buttons
