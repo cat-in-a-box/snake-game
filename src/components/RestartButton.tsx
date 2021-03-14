@@ -1,13 +1,12 @@
-import React from "react";
+import React from 'react';
 
-function RestartButton(event) {
-
+function RestartButton(event:any) {
 	//Листенер сидит и жмет пока ты нажмешь на кнопку
 	document.addEventListener("keydown", RestartButton);
 
 	//Назначение кода на пробел
-	let spaceBar = 32;
-	let spaceBarPressed = event.keyCode;
+	let spaceBar: number = 32;
+	let spaceBarPressed:any = event.keyCode;
 
 	//Перезагрузка страницы
 	if (spaceBarPressed === spaceBar) {

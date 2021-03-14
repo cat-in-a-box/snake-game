@@ -4,19 +4,19 @@ export default class GameProcess extends React.Component {
 
     componentDidMount() {
         //скорость обновления игры
-        const GameRefreshSpeed = 120;
+        const GameRefreshSpeed:number = 120;
         //цвет бордера канваса
-        const CanvasBorderColor = 'black';
+        const CanvasBorderColor:string = 'black';
         //цвет бекграунда канваса
-        let CanvasBackgroundColor = "white";
+        let CanvasBackgroundColor:string = "white";
         //цвет тела змеи
-        const SnakeColor = 'rgba(145,255,133,0.7)';
+        const SnakeColor:string = 'rgba(145,255,133,0.7)';
         //цвет бордера змеи
-        const SnakeBorderColor = 'darkgreen';
+        const SnakeBorderColor:string = 'black';
         //цвет еды
-        const FoodColor = '#ffa08f';
+        const FoodColor:string = '#ffa08f';
         //цвет бордера еды
-        const FoodBorderColor = 'black';
+        const FoodBorderColor:string = 'black';
 
         //координаты спауна змейки
         let snake = [
@@ -28,20 +28,20 @@ export default class GameProcess extends React.Component {
         ];
 
         // Счет игрока
-        let score = 0;
+        let score:any = 0!;
         // Меняется на true когда змейка меняет направление
-        let changingDirection = false;
+        let changingDirection:boolean = false;
         // x-координата еды
-        let foodX;
+        let foodX:number;
         // y-координата еды
-        let foodY;
+        let foodY:number;
         // Горизонтальная скорость движения
-        let dx = 30;
+        let dx:number = 30;
         // Вертикальная скорость движения
-        let dy = 0;
+        let dy:number = 0;
 
-        const gameCanvas = document.getElementById("SnakeGameCanvas");
-        const ctx = gameCanvas.getContext("2d");
+        const gameCanvas = document.getElementById("SnakeGameCanvas") as HTMLCanvasElement;
+        const ctx = gameCanvas.getContext("2d")!;
 
         // Старт игры
         main();
@@ -55,7 +55,7 @@ export default class GameProcess extends React.Component {
          * Постоянно выполняется, чтобы игра игралась
          **/
 
-        let victoryText = document.getElementById("SnakeScoreUnderText");
+        let victoryText = document.getElementById("SnakeScoreUnderText") as HTMLElement;
 
         function main() {
             if (GameEnd()) {
@@ -87,7 +87,7 @@ export default class GameProcess extends React.Component {
          **/
         function prepareCanvas() {
             ctx.fillStyle = CanvasBackgroundColor;
-            ctx.strokestyle = CanvasBorderColor;
+            ctx.strokeStyle = CanvasBorderColor;
             ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
             ctx.strokeRect(0, 0, gameCanvas.width, gameCanvas.height);
         }
@@ -98,7 +98,7 @@ export default class GameProcess extends React.Component {
          **/
         function drawFood() {
             ctx.fillStyle = FoodColor;
-            ctx.strokestyle = FoodBorderColor;
+            ctx.strokeStyle = FoodBorderColor;
             ctx.fillRect(foodX, foodY, 30, 30);
             ctx.strokeRect(foodX, foodY, 30, 30);
         }
@@ -117,7 +117,8 @@ export default class GameProcess extends React.Component {
                 // Повышает счёт
                 score += 1;
                 // Отображает счет на экране
-                document.getElementById('SnakeScore').innerHTML = score;
+                let displayScore:any = document.getElementById('SnakeScore')!;
+                displayScore.innerHTML = score;
                 // Создает новую еду
                 spawnFood();
             } else {
@@ -143,7 +144,7 @@ export default class GameProcess extends React.Component {
         /**
          * Генерирует рандомное число умноженное на 10 основываясь на минимальном и максимальном числе
          **/
-        function randomNumber(min, max) {
+        function randomNumber(min: number, max: number) {
             return Math.round((Math.random() * (max - min) + min) / 30) * 30;
         }
 
@@ -170,9 +171,9 @@ export default class GameProcess extends React.Component {
         /**
          * Рисует части змейки
          */
-        function drawSnakePart(snakePart) {
+        function drawSnakePart(snakePart: { x: number; y: number }) {
             ctx.fillStyle = SnakeColor;
-            ctx.strokestyle = SnakeBorderColor;
+            ctx.strokeStyle = SnakeBorderColor;
             // Рисует сам квадратик для змейки
             ctx.fillRect(snakePart.x, snakePart.y, 30, 30);
             // Рисует бордер для змейки
@@ -182,7 +183,7 @@ export default class GameProcess extends React.Component {
         /**
          * Изменяет вертикальную и горизонтальную скорость для змейки основываясь на нажатой кнопке
          */
-        function changeDirection(event) {
+        function changeDirection(event: { keyCode: any; }) {
             const leftArrowKey = 37;
             const rightArrowKey = 39;
             const upArrowKey = 38;
